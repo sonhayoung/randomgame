@@ -70,7 +70,11 @@ public void onClick(View v) {
         try{
             Toast.makeText(this, name + "씨, 배고파요!", Toast.LENGTH_LONG).show();
             Intent intent = new Intent(this, ResultActivity.class);
+            intent.putExtra("name",name);
+            intent.putExtra("age",10);
+
             startActivity(intent);
+
 
         }catch(NullPointerException e){
             Toast.makeText(this, "이름을 입력해주세요!", Toast.LENGTH_LONG).show();
