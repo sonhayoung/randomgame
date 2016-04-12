@@ -29,7 +29,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
     @Override
     protected void onResume() {
         super.onResume();
-        mName.setText("");
+        mName.setText(null);
 
     }
 
@@ -74,6 +74,7 @@ public void onClick(View v) {
             intent.putExtra("age",10);
 
             startActivity(intent);
+            overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
 
 
         }catch(NullPointerException e){
